@@ -51,4 +51,4 @@ app.delete('/api/notes/:id', function (req, res) {
     fs.writeFileSync('./miniature-eureka/Develop/db/db.json', data);
     res.send("deleted")
 })
-app.listen(8080)
+app.listen(process.env.PORT || 8080)
