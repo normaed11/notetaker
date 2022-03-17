@@ -18,7 +18,8 @@ const bodyParser = require('body-parser')
 // allows user to user methods: get post update put delete path
 const app = express()
 // middlewear to iniciate bodyparser
-app.use(bodyParser.json(), bodyParser.urlencoded({ extend: false }))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extend: false }))
 // middlewear helps grap static files
 app.use(express.static(__dirname + '/miniature-eureka/Develop/public/assets'))
 // http request through get method 
